@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import { Syne, JetBrains_Mono } from "next/font/google";
+import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
+import Cursor from "./components/Cursor";
+import BackToTop from "./components/BackToTop";
 
-const heading = Syne({
-  variable: "--font-heading-loaded",
+const display = Instrument_Serif({
+  variable: "--font-display-loaded",
   subsets: ["latin"],
-  weight: ["800"],
-});
-
-const label = JetBrains_Mono({
-  variable: "--font-label-loaded",
-  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -21,11 +19,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${heading.variable} ${label.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className={`${display.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Cursor />
+        <BackToTop />
+      </body>
     </html>
   );
 }

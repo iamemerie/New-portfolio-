@@ -10,11 +10,14 @@
 }
 
 @theme inline {
-  --font-heading: var(--font-heading-loaded);
-  --font-label: var(--font-label-loaded);
+  --font-display: var(--font-display-loaded);
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-fg);
+}
+
+html {
+  scroll-behavior: smooth;
 }
