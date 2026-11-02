@@ -1,6 +1,7 @@
 import HeroBackground from "./components/HeroBackground";
 import HeroScene from "./components/HeroScene";
 import GlowDivider from "./components/GlowDivider";
+import WorkSection from "./components/WorkSection";
 import Navbar from "./components/Navbar";
 
 const sectionClass = "scroll-mt-28 mx-auto max-w-5xl px-6 py-24";
@@ -15,21 +16,21 @@ export default function Home() {
       <main className="relative flex min-h-screen items-center overflow-hidden bg-[#0b0807] px-6 pt-32">
         <HeroBackground />
 
-        <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-10 lg:grid-cols-[1fr_360px]">
+        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1fr_320px]">
           <div>
             <p className="font-label text-xs uppercase tracking-widest text-neutral-400">
               <span className="text-accent">●</span> Portfolio / 2026 ·
               Full-stack developer &amp; data analyst
             </p>
 
-            <h1 className="mt-6 font-display text-6xl leading-[1.02] tracking-tight text-white md:text-8xl">
-              Building <em className="text-accent">data-driven</em>
+            <h1 className="mt-6 font-display text-3xl leading-[1.02] tracking-tight text-white md:text-8xl">
+              Building the web with <em className="text-accent">data</em>
               <br />
-              things for the web.
+              at its core.
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg text-neutral-400">
-              I build full-stack applications in Python and Three.js, and I
+            <p className="mt-8 max-w-xl text-md text-neutral-400">
+              I build full-stack applications in Python and Next.js, and I
               analyse the data behind them to decide what to build next.
             </p>
 
@@ -49,7 +50,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative hidden h-[360px] lg:block">
+          <div className="relative hidden h-[320px] lg:block">
             <HeroScene />
           </div>
         </div>
@@ -59,9 +60,7 @@ export default function Home() {
 
       {/* Work: your projects go here */}
       <section id="work" className={sectionClass}>
-        <p className={labelClass}>01 / Work</p>
-        <h2 className={titleClass}>Selected projects</h2>
-        <p className="mt-6 text-neutral-400">Project cards go here.</p>
+        <WorkSection />
       </section>
 
       <GlowDivider />

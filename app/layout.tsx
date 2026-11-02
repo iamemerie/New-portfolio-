@@ -3,6 +3,7 @@ import { Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import Cursor from "./components/Cursor";
 import BackToTop from "./components/BackToTop";
+import Spider from "./components/Spider";
 
 const display = Instrument_Serif({
   variable: "--font-display-loaded",
@@ -10,6 +11,8 @@ const display = Instrument_Serif({
   weight: "400",
   style: ["normal", "italic"],
 });
+
+
 
 export const metadata: Metadata = {
   title: "Wisdom | Full-stack Developer & Data Analyst",
@@ -19,11 +22,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${display.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${display.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         {children}
         <Cursor />
         <BackToTop />
+        <Spider />
       </body>
     </html>
   );

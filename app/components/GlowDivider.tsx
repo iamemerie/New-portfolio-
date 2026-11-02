@@ -10,15 +10,15 @@ export default function GlowDivider() {
       className="pointer-events-none relative h-px w-full"
     >
       {/* The line itself */}
-      <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#c98a4b]/40 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-transparent via-[#22d3ee]/40 to-transparent" />
 
       {/* Soft glow beneath the line */}
-      <div className="absolute -top-3 inset-x-0 h-6 bg-linear-to-r from-transparent via-[#c98a4b]/10 to-transparent blur-md" />
+      <div className="absolute -top-3 inset-x-0 h-6 bg-linear-to-r from-transparent via-[#22d3ee]/10 to-transparent blur-md" />
 
       {/* Slow highlight that travels along the line */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute inset-y-0 w-1/3 bg-linear-to-r from-transparent via-[#e0a86a]/50 to-transparent"
+          className="absolute inset-y-0 w-1/3 bg-linear-to-r from-transparent via-[#67e8f9]/50 to-transparent"
           initial={{ x: "-100%" }}
           animate={{ x: "400%" }}
           transition={{ duration: 7, repeat: Infinity, ease: "linear" }}

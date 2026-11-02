@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Build", href: "/#build" },
+  { label: "Build", href: "/#work" },
   { label: "About", href: "/#about" },
   { label: "CV", href: "/#cv" },
   { label: "Academics", href: "/#academics" },
@@ -29,15 +29,25 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-4 z-50 px-4">
       <div className="mx-auto max-w-5xl">
-        <nav
-          className={`flex items-center justify-between rounded-full border mt-10 px-5 py-2.5 backdrop-blur-xl transition-all duration-300 ${
-            scrolled
-              ? "border-white/10 bg-black/80 shadow-2xl shadow-black/50"
-              : "border-white/10 bg-neutral-900/60 shadow-lg shadow-black/20"
+        <motion.nav
+          animate={{
+            boxShadow: [
+              "0 0 12px rgba(34,211,238,0.15)",
+              "0 0 28px rgba(34,211,238,0.45)",
+            ],
+          }}
+          transition={{
+            duration: 2.8,
+            repeat: Infinity,
+            repeatType: "mirror",
+            ease: "easeInOut",
+          }}
+          className={`flex items-center justify-between rounded-full border border-accent/40 mt-10 px-6 py-3 backdrop-blur-xl transition-colors duration-300 ${
+            scrolled ? "bg-black/80" : "bg-neutral-900/60"
           }`}
         >
-          {/* Logo: the "W" fades in slowly, then the "c." slides out from behind it */}
-          <Link href="/" className="flex items-center pl-1">
+          {/* Logo: the "C" fades in slowly, then the "." slides out from behind it */}
+          <Link href="/" id="site-logo" className="flex items-center pl-1">
             <span className="isolate flex items-baseline font-heading text-5xl tracking-tight text-white">
               <motion.span
                 initial={{ opacity: 0 }}
@@ -83,7 +93,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-2 md:flex">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-6 py-3 text-xl font-label text-black transition-transform duration-200 hover:scale-105 active:scale-95 font-display"
+              className="inline-flex items-center gap-1.5 font-label rounded-full bg-accent px-6 py-3 text-xl text-black transition-transform duration-200 hover:scale-105 active:scale-95 font-display"
             >
               Book me <span className="text-sm">→</span>
             </Link>
@@ -100,7 +110,7 @@ export default function Navbar() {
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
-        </nav>
+        </motion.nav>
 
         {/* Mobile Dropdown Menu */}
         {open && (
@@ -131,7 +141,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 block w-full rounded-full bg-accent py-2.5 text-center text-sm font-bold text-black"
+              className="mt-3 block w-full rounded-full bg-accent py-2.5 text-center text-sm font-display text-black"
             >
               Book me →
             </Link>
