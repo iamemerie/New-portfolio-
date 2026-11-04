@@ -7,10 +7,14 @@
   --color-accent: #22d3ee;
   --color-muted: #9c8b7e;
   --color-border: #2a211c;
+  --animate-wave: wave 0.9s ease-in-out 2;
 }
 
 @theme inline {
+  --font-heading: var(--font-heading-loaded);
   --font-display: var(--font-display-loaded);
+  --font-label: var(--font-label-loaded);
+  --font-ui: var(--font-ui-loaded);
 }
 
 body {
@@ -20,4 +24,26 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(16deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  45% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
 }

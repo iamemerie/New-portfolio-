@@ -23,29 +23,24 @@ export default function Home() {
               Full-stack developer &amp; data analyst
             </p>
 
-            <h1 className="mt-6 font-display text-3xl leading-[1.02] tracking-tight text-white md:text-8xl">
+            <h1 className="mt-6 font-heading text-3xl leading-[1.02] tracking-tight text-white md:text-8xl">
               Building the web with <em className="text-accent">data</em>
               <br />
               at its core.
             </h1>
 
-            <p className="mt-8 max-w-xl text-md text-neutral-400">
-              I build full-stack applications in Python and Next.js, and I
-              analyse the data behind them to decide what to build next.
+            <p className="mt-8 max-w-xl text-md text-neutral-400 font-heading">
+              <span className="text-accent">●</span>I build full-stack
+              applications in Python and Next.js, and I analyse the data behind
+              them to decide what to build next.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#work"
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-black transition-transform duration-200 hover:scale-105 active:scale-95"
+                href="/download-cv"
+                className="inline-flex items-center gap-2 rounded-full font-ui border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
               >
-                See my work <span>→</span>
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
-              >
-                Contact me
+                Download CV <span>→</span>
               </a>
             </div>
           </div>

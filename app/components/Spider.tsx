@@ -9,9 +9,9 @@ import {
   type AnimationPlaybackControls,
 } from "motion/react";
 
-const SPIDER = "#000000";
-const SILK = "rgba(255,190,225,0.55)";
-const WEB = "rgba(255,255,255,0.28)";
+const SPIDER = "#8a0303";
+const SILK = "#f8f6ef";
+const WEB = "#f8f6ef";
 
 // Each leg is four joints from the body outward: hip, knee, ankle, foot.
 // These are for the right side. The left side is mirrored.
@@ -171,6 +171,7 @@ function Body() {
   );
 }
 
+let strandId = 0; // shared across effect runs, so every strand gets a unique id
 export default function Spider() {
   const x = useMotionValue(-200);
   const y = useMotionValue(-200);
@@ -196,7 +197,6 @@ export default function Spider() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (window.innerWidth < 768) return;
 
-    let counter = 0;
     let walkingNow = false;
     let cx: AnimationPlaybackControls | undefined;
     let cy: AnimationPlaybackControls | undefined;
@@ -211,7 +211,7 @@ export default function Spider() {
       y2: number,
       kind: Strand["kind"],
     ) {
-      const id = ++counter;
+      const id = ++strandId;
       setStrands((s) => [...s.slice(-60), { id, x1, y1, x2, y2, kind }]);
       setTimeout(
         () => setStrands((s) => s.filter((v) => v.id !== id)),

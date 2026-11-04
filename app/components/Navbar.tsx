@@ -11,7 +11,6 @@ const navItems = [
   { label: "About", href: "/#about" },
   { label: "CV", href: "/#cv" },
   { label: "Academics", href: "/#academics" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -48,7 +47,7 @@ export default function Navbar() {
         >
           {/* Logo: the "C" fades in slowly, then the "." slides out from behind it */}
           <Link href="/" id="site-logo" className="flex items-center pl-1">
-            <span className="isolate flex items-baseline font-heading text-5xl tracking-tight text-white">
+            <span className="isolate flex items-baseline font-display text-5xl tracking-tight text-white">
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -76,7 +75,7 @@ export default function Navbar() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`rounded-full px-4 py-1.5 text-sm font-medium tracking-wide transition-colors duration-200 ${
+                    className={`rounded-full px-4 py-1.5 text-sm font-heading font-medium tracking-wide transition-colors duration-200 ${
                       active
                         ? "bg-white/10 text-white"
                         : "text-neutral-400 hover:text-accent hover:underline hover:underline-offset-4"
@@ -93,9 +92,9 @@ export default function Navbar() {
           <div className="hidden items-center gap-2 md:flex">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 font-label rounded-full bg-accent px-6 py-3 text-xl text-black transition-transform duration-200 hover:scale-105 active:scale-95 font-display"
+              className="group relative inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-1.5 font-heading text-base text-black transition-transform duration-200 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Book me <span className="text-sm">→</span>
+              Business
             </Link>
           </div>
 
@@ -126,7 +125,7 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className={`block rounded-xl px-4 py-2.5 text-sm font-medium transition-colors ${
+                      className={`block rounded-xl px-4 py-2.5 text-sm font-heading font-medium transition-colors ${
                         active
                           ? "bg-white/10 text-white"
                           : "text-neutral-400 hover:bg-white/5 hover:text-white"
@@ -141,9 +140,9 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 block w-full rounded-full bg-accent py-2.5 text-center text-sm font-display text-black"
+              className="mt-3 block w-full rounded-full bg-accent py-2.5 text-center text-sm font-semibold font-heading text-black"
             >
-              Book me →
+              Drop me a message
             </Link>
           </div>
         )}
