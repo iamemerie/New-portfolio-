@@ -16,7 +16,7 @@ export const projects: Project[] = [
     meta: "01 / Featured · Live",
     domain: "https://poultry-site-zeta.vercel.app/",
     summary:
-      "A farm website with pre-orders, a waiting list, contact messages and a live stock dashboard, built on Next.js, Prisma and Supabase.",
+      "A farm website with a Postgres backend: validated APIs for pre-orders, waiting lists, contact messages and newsletter sign-ups, and a live stock view built from the database.",
     result: "Live on Vercel, with a Postgres database and email sign-up.",
     stack: ["Next.js", "TypeScript", "Prisma", "Supabase", "Tailwind"],
     image: "/projects/E-poultry home page.png",

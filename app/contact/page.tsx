@@ -26,11 +26,11 @@ const LINKS = [
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/your-handle",
-    href: "https://linkedin.com/in/your-handle",
+    value: "linkedin.com/in/wisdom-chukwuemeka-c15",
+    href: "https://linkedin.com/in/wisdom-chukwuemeka-c15",
   },
   {
-    label: "Mobile & WhatsApp",
+    label: "Phone",
     value: "+234 803 929 6951",
     href: "tel:+2348039296951",
   },
@@ -93,15 +93,16 @@ export default function ContactPage() {
               <span className="text-accent">●</span> Contact / 06
             </p>
 
-            <h1 className="mt-6 font-heading text-6xl font-bold leading-[1.02] text-white md:text-7xl">
-              Let&apos;s <span className="text-accent">make</span>
+            <h1 className="mt-6 font-heading font-bold text-6xl leading-[1.02] text-white md:text-7xl">
+              Let&apos;s <span className="text-accent">build</span>
               <br />
-              something for you.
+              something.
             </h1>
 
             <p className="mt-6 max-w-md text-neutral-400">
               Open to full-stack and data roles, and to projects that need
               someone who can build the interface and analyse what it does.
+              Moving to Italy next year.
             </p>
 
             <ul className="mt-12 divide-y divide-white/10 border-y border-white/10">
@@ -210,7 +211,7 @@ export default function ContactPage() {
               </label>
               <textarea
                 id="message"
-                rows={9}
+                rows={10}
                 value={form.message}
                 onChange={(e) => update("message", e.target.value)}
                 className={fieldClass}

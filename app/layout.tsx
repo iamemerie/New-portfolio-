@@ -43,9 +43,9 @@ const ui = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Chukwuemerie.dev",
+  title: "Wisdom Chukwuemeka - Backend Developer & Data Analyst",
   description:
-    "Portfolio of Wisdom, a full-stack developer based in Abuja, Nigeria.",
+    "Wisdom Chukwuemeka builds Python backends, data pipelines and interactive web interfaces, and analyses the data behind them.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

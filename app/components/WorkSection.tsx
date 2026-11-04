@@ -7,8 +7,9 @@ const stripes =
 
 export default function WorkSection() {
   return (
-    <section id="work" className="scroll-mt-28 mx-auto max-w-5xl px-6 py-24">
+    <section id="work" className="scroll-mt-28  mx-auto max-w-5xl px-6 py-24">
       <p className="font-label text-xs uppercase tracking-widest text-neutral-500">
+        <span className="text-accent">●</span>
         01 / Build
       </p>
       <h2 className="mt-3 font-display text-5xl text-white md:text-6xl">

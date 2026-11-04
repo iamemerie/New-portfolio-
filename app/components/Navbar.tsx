@@ -10,7 +10,6 @@ const navItems = [
   { label: "Build", href: "/#work" },
   { label: "About", href: "/#about" },
   { label: "CV", href: "/#cv" },
-  { label: "Academics", href: "/#academics" },
 ];
 
 export default function Navbar() {
