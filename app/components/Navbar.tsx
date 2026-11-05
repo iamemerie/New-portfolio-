@@ -9,7 +9,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Build", href: "/#work" },
   { label: "About", href: "/#about" },
-  { label: "CV", href: "/#cv" },
+  { label: "Resume", href: "/#cv" },
 ];
 
 export default function Navbar() {
@@ -93,7 +93,7 @@ export default function Navbar() {
               href="/contact"
               className="group relative inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-1.5 font-heading text-base text-black transition-transform duration-200 hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
-              Business
+              Let's talk
             </Link>
           </div>
 
@@ -141,7 +141,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-3 block w-full rounded-full bg-accent py-2.5 text-center text-sm font-semibold font-heading text-black"
             >
-              Drop me a message
+              Let's talk
             </Link>
           </div>
         )}

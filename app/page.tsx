@@ -20,18 +20,18 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1fr_320px]">
           <div>
-            <p className="text-xs font-ui uppercase tracking-widest text-neutral-400">
-              <span className="text-accent">●</span> Portfolio / 2026 · Backend
-              developer &amp; data analyst
+            <p className="text-sm md:text-xs font-ui uppercase tracking-widest text-neutral-400">
+              <span className="text-accent">●</span> Portfolio · full stack
+              developer &amp; environmental scientist
             </p>
 
-            <h1 className="mt-6 font-heading text-3xl leading-[1.02] tracking-tight text-white md:text-8xl">
+            <h1 className="mt-6 font-heading text-5xl leading-[1.02] tracking-tight text-white sm:text-6xl md:text-8xl">
               Backend first,
               <br />
               with the <span className="text-accent">data</span> to check it.
             </h1>
 
-            <p className="mt-8 max-w-xl text-md text-neutral-400 font-ui">
+            <p className="mt-8 max-w-xl text-lg md_text-base text-neutral-400 font-ui">
               I'm Wisdom Chukwuemeka. I build backend systems and the interfaces
               on top of them, then analyse the data they produce to decide what
               to fix next.
@@ -39,8 +39,8 @@ export default function Home() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="/CV.pdf"
-                className="inline-flex items-center gap-2 rounded-full font-ui border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
+                href="/cv.pdf"
+                className="inline-flex items-center gap-2 rounded-full font-ui border border-white/15 px-8 py-4 text-base font-medium text-white transition hover:bg-white/10 md:px-6 md:py-3 md:text-sm"
               >
                 Credentials <span>→</span>
               </a>

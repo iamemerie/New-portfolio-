@@ -17,7 +17,7 @@ export default function CV() {
 
         {/* Put your PDF in public/cv.pdf so this link works */}
         <a
-          href="/CV.pdf"
+          href="/cv.pdf"
           download
           className="inline-flex items-center font-ui gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10"
         >

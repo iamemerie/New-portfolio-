@@ -90,7 +90,7 @@ export default function ContactPage() {
           {/* Left: headline, availability and links */}
           <div>
             <p className="font-label text-xs uppercase tracking-widest text-neutral-500">
-              <span className="text-accent">●</span> Contact / 06
+              <span className="text-accent">●</span> Contact / 04
             </p>
 
             <h1 className="mt-6 font-heading font-bold text-6xl leading-[1.02] text-white md:text-7xl">
